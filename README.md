@@ -1,39 +1,36 @@
-**Welcome to your Base44 project** 
+# SpinShot (Standalone)
 
-**About**
+This project is a standard **Vite + React** app and can be fully self-hosted.
 
-View and Edit  your app on [Base44.com](http://Base44.com) 
+## Run locally
 
-This project contains everything you need to run your app locally.
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Start development server:
+   ```bash
+   npm run dev
+   ```
+3. Open the URL shown in terminal (typically `http://localhost:5173`).
 
-**Edit the code in your local development environment**
+## Build for production
 
-Any change pushed to the repo will also be reflected in the Base44 Builder.
-
-**Prerequisites:** 
-
-1. Clone the repository using the project's Git URL 
-2. Navigate to the project directory
-3. Install dependencies: `npm install`
-4. Create an `.env.local` file and set the right environment variables
-
-```
-VITE_BASE44_APP_ID=your_app_id
-VITE_BASE44_APP_BASE_URL=your_backend_url
-
-e.g.
-VITE_BASE44_APP_ID=cbef744a8545c389ef439ea6
-VITE_BASE44_APP_BASE_URL=https://my-to-do-list-81bfaad7.base44.app
+```bash
+npm run build
 ```
 
-Run the app: `npm run dev`
+This outputs static files to `dist/`.
 
-**Publish your changes**
+## Self-host deployment options
 
-Open [Base44.com](http://Base44.com) and click on Publish.
+You can deploy `dist/` to any static host:
+- Nginx / Apache
+- Cloudflare Pages
+- Netlify
+- Vercel
+- S3 + CloudFront
 
-**Docs & Support**
+## SPA routing note
 
-Documentation: [https://docs.base44.com/Integrations/Using-GitHub](https://docs.base44.com/Integrations/Using-GitHub)
-
-Support: [https://app.base44.com/support](https://app.base44.com/support)
+Configure your host to rewrite unknown routes to `index.html`.
