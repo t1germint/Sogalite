@@ -7,6 +7,7 @@ import PageNotFound from './lib/PageNotFound';
 import SpinShotKiosk from '@/components/SpinShotKiosk';
 
 const { Pages, Layout, mainPage } = pagesConfig;
+
 const mainPageKey = mainPage ?? Object.keys(Pages)[0];
 const MainPageComponent = mainPageKey ? Pages[mainPageKey] : SpinShotKiosk;
 
@@ -24,6 +25,7 @@ const StandaloneApp = () => {
           </LayoutWrapper>
         }
       />
+
       {Object.entries(Pages).map(([path, Page]) => (
         <Route
           key={path}
@@ -35,6 +37,7 @@ const StandaloneApp = () => {
           }
         />
       ))}
+
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
